@@ -19,6 +19,7 @@ return new class extends Migration
             $table->timestamp('ends_at')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
